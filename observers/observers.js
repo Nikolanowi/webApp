@@ -2,13 +2,13 @@ var observer = function (name) {
     var name = name;
 
     var notify = function () {
-        console.log( name + 'Desilo se');
-    }
+        console.log( name + "Desilo se");
+    };
     
     return {
         notify: notify
-    }
-}
+    };
+};
 
 var subject = function () {
     var observerCollection = [];
@@ -16,7 +16,7 @@ var subject = function () {
     var registerObserver = function (observer) {
         var observer = observer;
         observerCollection.push(observer);
-    }
+    };
 
     var unregisterObserver = function (observer) {
         var observer = observer;
@@ -26,7 +26,7 @@ var subject = function () {
             }
             
         }
-    }
+    };
 
     var notifyObservers = function () {
         for (var i = 0; i < observerCollection.length; i++) {
@@ -34,7 +34,7 @@ var subject = function () {
             observer.notify();
             
         }
-    }
+    };
 
     var run = function () {
         for (var i = 0; i < 100; i++) {
@@ -43,7 +43,7 @@ var subject = function () {
             }
             
         }
-    }
+    };
 
     return {
         registerObserver: registerObserver,
@@ -51,13 +51,13 @@ var subject = function () {
         run: run
         
         
-    }
-}
+    };
+};
 
 
 
-var ob1 = observer('ob1:');
-var ob2 = observer('ob2:');
+var ob1 = observer("ob1:");
+var ob2 = observer("ob2:");
 
 var sub = subject();
 

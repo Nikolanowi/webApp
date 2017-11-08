@@ -9,12 +9,12 @@ var name1={
         "mnt":"July",
         "day":17
     }
-}
+};
 
 var server = http.createServer((req,res)=>{
     res.statusCode=200;
     res.setHeader("Content-type","text/html");
-    res.write(JSON.stringify(name1))
+    res.write(JSON.stringify(name1));
 
     res.end();
 
@@ -22,4 +22,6 @@ var server = http.createServer((req,res)=>{
 server.listen(port, hostname,() => {
     console.log("Server runing at http://"+ hostname + ":" + port + "/");
 
-})
+});
+var open= require("open");
+open("http://127.0.0.1:3000/");

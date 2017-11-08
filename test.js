@@ -1,10 +1,11 @@
-var figlet = require('figlet');
+var figlet = require("figlet");
 
-figlet('Hello World!!', function(err, data) {
-   if (err) {
-       console.log('Something went wrong...');
-       console.dir(err);
-       return;
-   }
-   console.log(data)
+figlet("Hello World   !   !\n___________\n Hello World  !   ! ", function(err, data) {
+//    if (err) {
+//        console.log('Something went wrong...');
+//        console.dir(err);
+//        return;
+//    }
+    console.log(data);
 });
+

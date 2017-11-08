@@ -1,12 +1,11 @@
 console.log("hy");
 
-
 var p1 = new Promise(function (resolve, reject) {
     var m = 0;
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < 120; i++) {
         setTimeout(function (i) {
-            console.log("p1:" + i)
-            if(i===999){
+            console.log("p1:" + i);
+            if(i===119){
                 resolve();
             }
         }, i, i);
@@ -21,7 +20,7 @@ var p2 = new Promise(function (resolve, reject){
     for (var i = 0; i < 100; i++) {
         res = i * i;
         setTimeout(function (i) {
-            console.log("p2:" + i)
+            console.log("p2:" + i);
             if(i===99){
                 resolve();
             }
@@ -59,8 +58,8 @@ p2.then(function (resol) {
 var allPromises= Promise.race([p1, p2]);
 allPromises.then(function(){
 
-    console.log("All promises done")
-})
+    console.log("All promises done");
+});
 console.log("not done:"); 
 
 //promise - race, all

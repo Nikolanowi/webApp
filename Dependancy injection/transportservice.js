@@ -24,4 +24,4 @@ var planeTransportService = function () {
 
 
 doSomeWork(new carTransportService(), "CG");
-doSomeWork(new carTransportService(), "Greece");
+doSomeWork(new planeTransportService(), "Greece");
